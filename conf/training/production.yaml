@@ -1,0 +1,9 @@
+# @package training
+batch_size: 8
+num_workers: 6
+lr: 1.0e-5  # Increased from 1e-5 for better hypernet learning
+wd: 0
+num_epochs: 20
+lr_decay: 15
+seed: 42
+lora_grad_log_interval: 1000

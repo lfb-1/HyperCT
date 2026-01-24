@@ -1,0 +1,34 @@
+# @package model
+# DINOv3 Vision Transformer with LoRA Hypernet Configuration
+
+use_radio_labels: true
+
+# Task embedding configuration (learnable only)
+use_frozen_task_embeddings: false
+learnable_embedding_dim: 512
+learnable_embedding_init_std: 0.02
+
+# LoRA parameters (adjusted for DINOv3's 768-dim features)
+latent_size: 128
+head_in_size: 768  # DINOv3 feature dimension
+lora_rank: 16
+lora_alpha: 256.0
+lora_dropout: 0.0
+lora_scaling: 1.0
+
+# DINOv3-specific parameters
+dinov3_feature_dim: 768
+dinov3_num_images: 55  # 165 slices / 3 = 55 RGB images
+dinov3_aggregation: "mean"  # "mean", "max", or "cls_token"
+dinov3_input_size: 144  # Match CT crop size to avoid resizing
+dinov3_freeze_base: true
+train_base_mlp_head: true  # Set true to jointly train base head plus LoRA deltas
+
+# Target modules (based on dinov3_hypernet_config.json)
+target_modules:
+  - "attention_query"    # layer.*.attention.q_proj
+  - "attention_key"      # layer.*.attention.k_proj  
+  - "attention_value"    # layer.*.attention.v_proj
+  - "attention_output"   # layer.*.attention.o_proj
+  - "mlp_up"            # layer.*.mlp.up_proj
+  - "mlp_down"          # layer.*.mlp.down_proj

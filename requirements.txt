@@ -1,0 +1,22 @@
+# Core dependencies
+torch==2.2.2
+transformers==4.56.0
+hydra-core
+
+# Data processing
+scikit-learn
+# 3D augmentation
+volumentations-3D
+
+# Visualization
+plotly
+
+# Logging
+loguru
+
+# Model training
+peft
+
+# Debugging
+debugpy
+ipdb

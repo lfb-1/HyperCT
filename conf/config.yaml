@@ -1,0 +1,28 @@
+# @package _global_
+defaults:
+  - model: dinov3
+  - training: production
+  - azureml: production
+  - evaluation: default
+  - _self_
+
+# Paths configuration
+paths:
+  pretrain_weight_dir: "../../cap/data-capability/wd/pretrain_weight_dir/"
+  train_val_dir: "../../cap/data-capability/wd/train_val_dir/"
+  output_dir: "../../cap/data-capability/wd/save_weight_dir/"
+  dinov3_dir: "../../cap/data-capability/wd/dinov3_dir/"
+  checkpoint_dir: '../../cap/data-capability/wd/checkpoint_dir/'
+
+# Job submission options
+job_type: "training"
+debug_mode: false
+dry_run: false
+display_name: null
+
+# Hydra configuration
+hydra:
+  run:
+    dir: ${paths.output_dir}
+  job:
+    chdir: false  # Don't change working directory

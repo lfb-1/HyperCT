@@ -1,0 +1,29 @@
+# @package azureml
+subscription_id: "<YOUR_SUBSCRIPTION_ID>"
+resource_group: "<YOUR_RESOURCE_GROUP>"
+workspace_name: "<YOUR_WORKSPACE_NAME>"
+compute_name: "<YOUR_COMPUTE_NAME>"
+environment_name: "<YOUR_ENVIRONMENT_NAME>"
+experiment_name: "<YOUR_EXPERIMENT_NAME>"
+
+# Azure ML data paths
+path_prefix: "azureml://datastores/workspaceworkingdirectory/paths"
+data_base_path: "Users/<YOUR_USERNAME>/data_weights"
+
+# Input data paths
+pretrain_weight_path: "pretrained/ctvit/"
+train_val_path: "data/merged_with_notes/"
+task_embed_path: "task_embeddings/"
+dinov3_path: "pretrained/dinov3/"
+checkpoint_path: "output/<YOUR_CHECKPOINT_DIR>/"
+
+# Output path template
+output_path_template: "output/CT2ECHO_{model_type}_{timestamp}/"
+# output_path_template: "output/"
+
+# Job environment variables
+job_env_vars:
+  AZUREML_COMPUTE_USE_COMMON_RUNTIME: "True"
+  AZUREML_COMMON_RUNTIME_USE_INTERACTIVE_CAPABILITY: "True"
+  AZUREML_SSH_KEY: "generated-key"
+  AZUREML_CONTAINER_RUNTIME_CONFIG: '{"shm_size": "32g"}'

@@ -1,0 +1,17 @@
+# @package evaluation
+# Default evaluation configuration
+
+# Azure ML data paths (same as production config)
+path_prefix: "azureml://datastores/workspaceworkingdirectory/paths"
+data_base_path: "Users/<YOUR_USERNAME>/data_weights"
+
+# Model directory (relative to data_base_path/output/)
+# Example: "CT2ECHO_hypernet_20250906_163614"
+# Will be resolved to: azureml://datastores/workspaceworkingdirectory/paths/Users/<YOUR_USERNAME>/data_weights/output/<YOUR_MODEL_DIR>/
+model_dir: null
+
+# Specific epoch to evaluate (null = auto-detect best epoch)
+epoch: null
+
+# Device to use for evaluation
+device: "cuda:0"
