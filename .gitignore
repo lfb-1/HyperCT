@@ -1,0 +1,37 @@
+# Local Azure ML config (contains sensitive credentials)
+conf/azureml/local.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Hydra outputs
+outputs/
+.hydra/
+
+# Environment
+.env
+.venv/
+venv/
