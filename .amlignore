@@ -1,0 +1,19 @@
+# Archive folder (old codebase backup)
+archive_old_files/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local config with credentials
+conf/azureml/local.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+
+# Claude
+.claude/
