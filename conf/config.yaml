@@ -12,7 +12,8 @@ paths:
   train_val_dir: "../../cap/data-capability/wd/train_val_dir/"
   output_dir: "../../cap/data-capability/wd/save_weight_dir/"
   dinov3_dir: "../../cap/data-capability/wd/dinov3_dir/"
-  checkpoint_dir: '../../cap/data-capability/wd/checkpoint_dir/'
+  checkpoint_dir: "../../cap/data-capability/wd/checkpoint_dir/"
+  task_embed_dir: "../../cap/data-capability/wd/task_embed_dir/"
 
 # Job submission options
 job_type: "training"
