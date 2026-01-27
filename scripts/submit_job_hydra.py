@@ -154,7 +154,7 @@ def create_training_job(cfg: DictConfig, debug_mode: bool = False, display_name:
     # Build Hydra command with path overrides
     command_parts = build_base_command(debug_mode)
     hydra_overrides = create_hydra_overrides_command(cfg)
-    command_parts.extend(["mtl_main_hydra.py", hydra_overrides])
+    command_parts.extend(["scripts/mtl_main_hydra.py", hydra_overrides])
 
     # Use debug experiment name if in debug mode (append _DEBUG to any experiment)
     experiment_name = azureml_cfg.experiment_name
@@ -326,7 +326,7 @@ def main(cfg: DictConfig) -> None:
     # Show the command that will be sent to Azure ML
     print("\n📋 Azure ML Command Preview:")
     hydra_overrides = create_hydra_overrides_command(cfg)
-    print(f"   python mtl_main_hydra.py {hydra_overrides}")
+    print(f"   python scripts/mtl_main_hydra.py {hydra_overrides}")
 
     print("=" * 60 + "\n")
 
