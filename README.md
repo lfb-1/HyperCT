@@ -85,4 +85,4 @@ Training outputs are saved to `paths.output_dir`:
 
 ## Saliency Maps
 
-Pre-computed saliency maps are available on [Google Drive](https://drive.google.com/drive/folders/1lEtJkG8wuZbQGd56rAQDYt7MvvZ7Xnap?usp=drive_link).
+Pre-computed saliency maps are available on [Google Drive](https://drive.google.com/drive/folders/1lEtJkG8wuZbQGd56rAQDYt7MvvZ7Xnap?usp=sharing).
